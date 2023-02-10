@@ -28,6 +28,15 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
     />
+    <!-- Add the jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Add the jQuery Confirm library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
   </head>
   <body>
     <!-- Navbar Start Here -->
@@ -117,9 +126,7 @@
               <div class="carousel-caption text-start">
                 <div class="row">
                   <div class="col-6">
-                    <h1 class="text-dark">
-                      MANUAL ACCOUNTING SYSTEM DEVELOPMENT
-                    </h1>
+                    <h1 class="text-dark">Accounting Software in Bangladesh</h1>
                     <p class="text-danger">
                       Without manual system no one can survive. And a software
                       is a digital version of manual system. It can reduce your
@@ -141,7 +148,7 @@
             />
             <div class="container">
               <div class="carousel-caption text-start">
-                <h1 class="text-dark">Example headline.</h1>
+                <h1 class="text-dark">POS</h1>
                 <p class="text-danger">
                   Some representative placeholder content <br />
                   the first slide of the carousel.
@@ -826,53 +833,9 @@
                   </li>
                 </ul>
                 <div class="d-grid">
-                  <!-- Button trigger modal -->
-                  <button
-                    type="button"
-                    class="btn btn-primary"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
+                  <a href="#" class="btn btn-primary text-uppercase selectplan"
+                    >Select Plan</a
                   >
-                    Select Plan
-                  </button>
-
-                  <!-- Modal -->
-                  <div
-                    class="modal fade"
-                    id="exampleModal"
-                    tabindex="-1"
-                    aria-labelledby="exampleModalLabel"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="exampleModalLabel">
-                            Modal title
-                          </h1>
-                          <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          ></button>
-                        </div>
-                        <div class="modal-body">...</div>
-                        <div class="modal-footer">
-                          <button
-                            type="button"
-                            class="btn btn-secondary"
-                            data-bs-dismiss="modal"
-                          >
-                            Close
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            Save changes
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -936,54 +899,9 @@
                   </li>
                 </ul>
                 <div class="d-grid">
-                  <!-- Button trigger modal -->
-                  <button
-                    type="button"
-                    class="btn btn-primary"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
+                  <a href="#" class="btn btn-primary text-uppercase selectplan"
+                    >Select Plan</a
                   >
-                    Launch demo modal
-                  </button>
-
-                  <!-- Modal -->
-                  <div
-                    class="modal fade"
-                    id="exampleModal"
-                    tabindex="-1"
-                    aria-labelledby="exampleModalLabel"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="exampleModalLabel">
-                            Hi Here
-                          </h1>
-                          <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          ></button>
-                        </div>
-                        <div class="modal-body">...</div>
-                        <div class="modal-footer">
-                          <button
-                            type="button"
-                            class="btn btn-secondary"
-                            data-bs-dismiss="modal"
-                          >
-                            Close
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            Save changes
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- rte5ry64t5e -->
                 </div>
               </div>
             </div>
@@ -1046,7 +964,7 @@
                   </li>
                 </ul>
                 <div class="d-grid">
-                  <a href="#" class="btn btn-primary text-uppercase"
+                  <a href="#" class="btn btn-primary text-uppercase selectplan"
                     >Select Plan</a
                   >
                 </div>
@@ -1801,6 +1719,39 @@
       </div>
     </section>
     <!--Footer Option End-->
+    <!-- popup script start here -->
+    <script>
+      $(".selectplan").on("click", function () {
+        $.confirm({
+          title: "ASB ONLINE ERP SOFTWARE",
+          content: "<h3>Heading</h3><p>Body paragraph</p>",
+          buttons: {
+            whatsApp: {
+              text: "<i class='bi bi-whatsapp'></i> WhatsApp",
+              btnClass: "btn-success",
+              action: function () {
+                // your WhatsApp button action
+              },
+            },
+            email: {
+              text: "<i class='bi bi-envelope'></i> Email",
+              btnClass: "btn-primary",
+              action: function () {
+                // your email button action
+              },
+            },
+            close: {
+              text: "<i class='bi bi-x-lg'></i> Close",
+              btnClass: "btn-danger",
+              action: function () {
+                // close the modal
+              },
+            },
+          },
+        });
+      });
+    </script>
+    <!-- popup script end here -->
     <!--Script-->
     <script src="assets/script/script.js"></script>
     <!--Script-->

@@ -1730,14 +1730,20 @@
               text: "<i class='bi bi-whatsapp'></i> WhatsApp",
               btnClass: "btn-success",
               action: function () {
-                // your WhatsApp button action
+                // Open WhatsApp with pre-filled message
+                window.open(
+                  "https://api.whatsapp.com/send?text=Hello%20there!"
+                );
               },
             },
             email: {
               text: "<i class='bi bi-envelope'></i> Email",
               btnClass: "btn-primary",
               action: function () {
-                // your email button action
+                // Open default email client with pre-filled subject and body
+                window.open(
+                  "mailto:tanvir@gmail.com?subject=Hello&body=Hello%20there!"
+                );
               },
             },
             close: {
